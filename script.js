@@ -1,5 +1,5 @@
  var game = new Phaser.Game(1920, 1080, Phaser.AUTO, '', {preload: preload, create: create}); 
-var cow;
+ var cow;
  function preload() {
  	game.load.spritesheet('cow', 'assets/cow.png', 100, 50);
 }
