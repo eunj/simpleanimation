@@ -3,25 +3,28 @@ var Rbt;
 var Bbt;
 var uidrum;
 var lsoil;
-var trowel;
 var dust;
+var trowel;
+var chorogi;
 
 function preload() {
 	game.load.image('back', 'assets/back.jpg');
 	game.load.image('drum', 'assets/drum.png');
 	game.load.image('uihm', 'assets/uihm.png');
 	game.load.image('onRbt', 'assets/onRbt.png');
-
+	
 	game.load.spritesheet('Rbt','assets/Rbt.png');
 	game.load.spritesheet('Bbt','assets/Bbt.png');
 	game.load.spritesheet('uidrum','assets/uidrum.png',95,65);
+
 	game.load.spritesheet('lsoil','assets/lsoil.png',500,247);
 	game.load.spritesheet('rsoil','assets/rsoil.png',534,435);
 
+	game.load.spritesheet('dust','assets/dust.png',259,341);
 	game.load.spritesheet('trowel','assets/trowel.png',548,711);
 
-	game.load.spritesheet('dust','assets/dust.png',259,341);
-
+	game.load.spritesheet('chorogi','assets/chorogi.png',263,441);
+	
 
 
 }
@@ -49,22 +52,27 @@ function create() {
 
 	rsoil = game.add.sprite(1404,700, 'rsoil');
 
-	trowel = game.add.sprite(120,680, 'trowel');
+	dust = game.add.sprite(120,680, 'dust');
+	dust.animations.add('movedust');
+
+	trowel = game.add.sprite(130,690, 'trowel');
 	trowel.animations.add('movetrowel');
 	
 }
 
 function RbtClick() {	
 
-trowel.animations.play('movetrowel', 8, false);
-
-
-dust = game.add.sprite(120,680, 'dust');
-dust.animations.add('movedust');
 dust.animations.play('movedust', 8, false);
+
+trowel.animations.play('movetrowel', 7, false);
 }
 
 
 function BbtClick() {	
+	
+chorogi = game.add.sprite(100,600, 'chorogi');
+chorogi.animations.add('movechorogi');
+chorogi.animations.play('movechorogi', 10, false);
+
 
 }
