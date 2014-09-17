@@ -10,6 +10,7 @@ function preload() {
 	game.load.image('back', 'assets/back.jpg');
 	game.load.image('drum', 'assets/drum.png');
 	game.load.image('uihm', 'assets/uihm.png');
+	game.load.image('onRbt', 'assets/onRbt.png');
 
 	game.load.spritesheet('Rbt','assets/Rbt.png');
 	game.load.spritesheet('Bbt','assets/Bbt.png');
@@ -35,6 +36,8 @@ function create() {
 	Rbt.events.onInputDown.add(RbtClick, this);
 
 	Bbt = game.add.sprite(980,106, 'Bbt');
+	Bbt.inputEnabled = true;
+	Bbt.events.onInputDown.add(BbtClick, this);
 
 	uidrum = game.add.sprite(1585,30, 'uidrum');
 	uidrum.animations.add('move');
@@ -48,19 +51,20 @@ function create() {
 
 	trowel = game.add.sprite(120,680, 'trowel');
 	trowel.animations.add('movetrowel');
-
-	dust = game.add.sprite(120,680, 'dust');
-	dust.animations.add('movedust');
-	
-
-
-
-	//cow.inputEnabled = true;
-	//cow.events.onInputDown.add(cowClick, this);
 	
 }
 
-function RbtClick() {
+function RbtClick() {	
+
 trowel.animations.play('movetrowel', 8, false);
+
+
+dust = game.add.sprite(120,680, 'dust');
+dust.animations.add('movedust');
 dust.animations.play('movedust', 8, false);
+}
+
+
+function BbtClick() {	
+
 }
