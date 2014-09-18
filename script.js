@@ -101,7 +101,7 @@ chorogi.events.onInputDown.add(BbtClick, this);
 
 chorogi.animations.play('jump');
 
-//chorogi.animations.play('movechorogi', 10, false);
+chorogi.animations.play('movechorogi', 10, false);
 
 
 }
