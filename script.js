@@ -6,6 +6,9 @@ var lsoil;
 var dust = [];
 var trowel;
 var chorogi;
+var hello;
+
+
 
 function preload() {
 	game.load.image('back', 'assets/back.jpg');
@@ -24,12 +27,17 @@ function preload() {
 	game.load.spritesheet('trowel','assets/trowel.png',548,711);
 
 	game.load.spritesheet('chorogi','assets/chorogi.png',263,441);
+
+	game.load.audio('hello', 'assets/sound02.mp3');
 	
 
 
 }
 
 function create() {
+
+	hello = game.add.audio('hello');
+
 	game.add.sprite(0,0, 'back');
 	game.add.sprite(0,0, 'drum');
 	game.add.sprite(1722,30, 'uihm');
@@ -81,6 +89,8 @@ dust[1].animations.play('movedust', 5, false);
 dust[2].animations.play('movedust', 10, false);
 
 trowel.animations.play('movetrowel', 7, false);
+
+hello.play();
 }
 
 
