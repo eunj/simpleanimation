@@ -67,46 +67,28 @@ function create() {
 	trowel.animations.add('movetrowel');
 
 	trowel.mo = game.add.tween(trowel)
-	.to({ x: 130, y: 680 }, 2000, Phaser.Easing.Linear.None)
-	.to({ x: 430, y: 600 }, 2000, Phaser.Easing.Linear.None)
-	.loop()
+		.to({ x: 130, y: 680 }, 2000, Phaser.Easing.Linear.None)
+		.to({ x: 430, y: 600 }, 2000, Phaser.Easing.Linear.None)
+		.loop()
 	.start();
-
-
-
-
-	chorogi = game.add.sprite(100,600, 'chorogi');
-	chorogi.animations.add('jump' [0,1,2,3,4,5,6,7],12,true,true );
-
-	chorogi.cutAnim = chorogi.animations.add('cut');
-
-	var cutCompleted = function(){
-		chorogi.animations.play('jump');
-	}
-
-	chorogi.cutAnim.onComplete.add(cutCompleted, this);
-
-	chorogi.inputEnabled = true;
-	chorogi.events.onInputDown.add(BbtClick, this);
-
-	chorogi.animations.play('jump');
 	
 }
 
 function RbtClick() {	
 
-	dust[0].animations.play('movedust', 8, false);
-	dust[1].animations.play('movedust', 5, false);
-	dust[2].animations.play('movedust', 10, false);
+dust[0].animations.play('movedust', 8, false);
+dust[1].animations.play('movedust', 5, false);
+dust[2].animations.play('movedust', 10, false);
 
-	trowel.animations.play('movetrowel', 7, false);
+trowel.animations.play('movetrowel', 7, false);
 }
 
 
 function BbtClick() {	
-
-
-	chorogi.animations.play('movechorogi', 10, false);
+	
+chorogi = game.add.sprite(100,600, 'chorogi');
+chorogi.animations.add('movechorogi');
+chorogi.animations.play('movechorogi', 10, false);
 
 
 }
