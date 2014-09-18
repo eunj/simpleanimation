@@ -69,7 +69,7 @@ function create() {
 	uidrum.mo = game.add.tween(uidrum)
 		.to({ x: 130, y: 680 }, 2000, Phaser.Easing.Linear.None)
 		.to({ x: 430, y: 600 }, 2000, Phaser.Easing.Linear.None)
-		.ioop()
+		.loop()
 	.start();
 	
 }
