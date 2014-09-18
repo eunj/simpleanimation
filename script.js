@@ -97,7 +97,7 @@ var cutCompleted = function(){
 chorogi.cutAnim.onComplete.add(cutCompleted, this);
 
 chorogi.inputEnabled = true;
-chorogi.events.onInputDown.add(treeClick, this);
+chorogi.events.onInputDown.add(BbtClick, this);
 
 chorogi.animations.play('jump');
 
