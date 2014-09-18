@@ -71,8 +71,8 @@ function create() {
 function RbtClick() {	
 
 dust[0].animations.play('movedust', 8, false);
-dust[1].animations.play('movedust', 8, false);
-dust[2].animations.play('movedust', 8, false);
+dust[1].animations.play('movedust', 5, false);
+dust[2].animations.play('movedust', 10, false);
 
 trowel.animations.play('movetrowel', 7, false);
 }
