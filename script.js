@@ -52,8 +52,16 @@ function create() {
 
 	rsoil = game.add.sprite(1404,700, 'rsoil');
 
-	dust = game.add.sprite(120,680, 'dust');
-	dust.animations.add('movedust');
+	dust[0] = game.add.sprite(120,680, 'dust');
+	dust[0].animations.add('movedust');
+
+	dust[1] = game.add.sprite(130,680, 'dust');
+	dust[1].animations.add('movedust');
+
+	dust[2] = game.add.sprite(140,680, 'dust');
+	dust[2].animations.add('movedust');
+
+
 
 	trowel = game.add.sprite(130,690, 'trowel');
 	trowel.animations.add('movetrowel');
@@ -62,7 +70,9 @@ function create() {
 
 function RbtClick() {	
 
-dust.animations.play('movedust', 8, false);
+dust[0].animations.play('movedust', 8, false);
+dust[1].animations.play('movedust', 8, false);
+dust[2].animations.play('movedust', 8, false);
 
 trowel.animations.play('movetrowel', 7, false);
 }
