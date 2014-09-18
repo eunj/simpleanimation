@@ -3,7 +3,7 @@ var Rbt;
 var Bbt;
 var uidrum;
 var lsoil;
-var dust;
+var dust = [];
 var trowel;
 var chorogi;
 
