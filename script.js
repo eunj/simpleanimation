@@ -66,7 +66,7 @@ function create() {
 	trowel = game.add.sprite(130,690, 'trowel');
 	trowel.animations.add('movetrowel');
 
-	trowel.move = game.add.tween(trowel)
+	dust[2].move = game.add.tween(dust[2])
 		.to({ x: 130, y: 680 }, 2000, Phaser.Easing.Linear.None)
 		.to({ x: 430, y: 600 }, 2000, Phaser.Easing.Linear.None)
 		.ioop()
