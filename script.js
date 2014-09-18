@@ -87,8 +87,21 @@ trowel.animations.play('movetrowel', 7, false);
 function BbtClick() {	
 	
 chorogi = game.add.sprite(100,600, 'chorogi');
-chorogi.animations.add('movechorogi');
-chorogi.animations.play('movechorogi', 10, false);
+chorogi.animations.add('jump' [0,1,2,3,4,5,6,7],12,true,true );
+
+chorogi.cutAnim = tree.animations.add('cut');
+var cutCompleted = function(){
+	chorogi.animations.play('jump');
+}
+
+chorogi.cutAnim.onComplete.add(cutCompleted, this);
+
+chorogi.inputEnabled = true;
+chorogi.events.onInputDown.add(treeClick, this);
+
+chorogi.animations.play('jump');
+
+//chorogi.animations.play('movechorogi', 10, false);
 
 
 }
