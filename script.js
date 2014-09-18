@@ -89,7 +89,7 @@ function BbtClick() {
 chorogi = game.add.sprite(100,600, 'chorogi');
 chorogi.animations.add('jump' [0,1,2,3,4,5,6,7],12,true,true );
 
-chorogi.cutAnim = tree.animations.add('cut');
+chorogi.cutAnim = chorogi.animations.add('cut');
 var cutCompleted = function(){
 	chorogi.animations.play('jump');
 }
