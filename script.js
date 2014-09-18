@@ -55,7 +55,7 @@ function create() {
 	dust[0] = game.add.sprite(120,680, 'dust');
 	dust[0].animations.add('movedust');
 
-	dust[1] = game.add.sprite(130,680, 'dust');
+	dust[1] = game.add.sprite(160,680, 'dust');
 	dust[1].animations.add('movedust');
 
 	dust[2] = game.add.sprite(140,680, 'dust');
