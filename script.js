@@ -60,7 +60,7 @@ function create() {
 
 	dust[2] = game.add.sprite(200,680, 'dust');
 	dust[2].animations.add('movedust');
-
+dust[2].animations.play('movedust', 10, false);
 
 
 	trowel = game.add.sprite(130,690, 'trowel');
@@ -78,7 +78,7 @@ function RbtClick() {
 
 dust[0].animations.play('movedust', 8, false);
 dust[1].animations.play('movedust', 5, false);
-dust[2].animations.play('movedust', 10, false);
+
 
 trowel.animations.play('movetrowel', 7, false);
 }
