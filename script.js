@@ -7,6 +7,7 @@ var dust = [];
 var trowel;
 var chorogi;
 var hello;
+var bgm;
 
 
 
@@ -29,6 +30,7 @@ function preload() {
 	game.load.spritesheet('chorogi','assets/chorogi.png',263,441);
 
 	game.load.audio('hello', 'assets/sound02.mp3');
+	game.load.audio('bgm', 'assets/04 Yuki no Eki.mp3');
 	
 
 
@@ -37,6 +39,10 @@ function preload() {
 function create() {
 
 	hello = game.add.audio('hello');
+	bgm = game.add.audio('bgm');
+	bgm.play();
+
+
 
 	game.add.sprite(0,0, 'back');
 	game.add.sprite(0,0, 'drum');
@@ -89,8 +95,8 @@ dust[1].animations.play('movedust', 5, false);
 dust[2].animations.play('movedust', 10, false);
 
 trowel.animations.play('movetrowel', 7, false);
-
 hello.play();
+
 }
 
 
