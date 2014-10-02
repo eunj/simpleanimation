@@ -97,6 +97,9 @@ function create() {
 }
 
 function dustBurst(){
+	dustEmitter.x=mouse.x;
+	dustEmitter.y=mouse.y;
+
 	dustEmitter.start(false, 2000, 10, 10);
 	dustEmitter.gravity=100;
 }
