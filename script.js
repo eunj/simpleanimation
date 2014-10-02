@@ -80,7 +80,7 @@ function create() {
 
 	dustEmitter = game.add.emitter(100, 100);
 	dustEmitter.makeParticles('dust');
-	dustEmitter.start(true, 2000, null, 10);
+	dustEmitter.start(false, 2000, 1, 10);
 
 
 	trowel = game.add.sprite(130,690, 'trowel');
@@ -108,8 +108,6 @@ function RbtClick() {
 
 
 function BbtClick() {	
-	
-	
 	chorogi.animations.play('movechorogi', 10, false);
 
 
