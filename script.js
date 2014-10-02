@@ -80,7 +80,8 @@ function create() {
 
 	dustEmitter = game.add.emitter(100, 100);
 	dustEmitter.makeParticles('dust');
-	dustEmitter.start(false, 2000, 1, 10);
+	dustEmitter.start(false, 2000, 10, 10);
+	dustEmitter.gravity=100;
 
 
 	trowel = game.add.sprite(130,690, 'trowel');
