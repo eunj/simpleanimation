@@ -45,7 +45,9 @@ function create() {
 
 
 	chorogi = game.add.sprite(100,600, 'chorogi');
-	
+	chorogi.animations.add('movechorogi');
+	chorogi.visible = false;
+
 
 	game.add.sprite(0,0, 'back');
 	game.add.sprite(0,0, 'drum');
@@ -117,8 +119,8 @@ function RbtClick() {
 }
 
 
-function BbtClick() {	
-	chorogi.animations.add('movechorogi');
+function BbtClick() {
+	chorogi.visible = true;
 	chorogi.animations.play('movechorogi', 10, false);
 
 
