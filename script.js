@@ -96,7 +96,7 @@ function create() {
 	
 }
 
-function dustBurst(){
+function dustBurst(mouse){
 	dustEmitter.x=mouse.x;
 	dustEmitter.y=mouse.y;
 
