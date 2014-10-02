@@ -79,7 +79,7 @@ function create() {
 	dust[2].animations.add('movedust');
 
 	dustEmitter = game.add.emitter(100, 100);
-	dustEmitter.makeParticles('cow');
+	dustEmitter.makeParticles('dust');
 	dustEmitter.start(true, 2000, null, 10);
 
 
