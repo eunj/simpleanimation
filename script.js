@@ -79,8 +79,9 @@ function create() {
 	dust[2].animations.add('movedust');
 
 
-	game = game.input.onDown.add(dustBurst, this);
+	dustEmitter = game.add.emitter(100, 100);
 	dustEmitter.makeParticles('dust');
+	game.input.onDown.add(dustEmitter, this);
 	
 	
 
