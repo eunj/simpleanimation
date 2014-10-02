@@ -44,9 +44,6 @@ function create() {
 	bgm.play();
 
 
-	chorogi = game.add.sprite(100,600, 'chorogi');
-	chorogi.animations.add('movechorogi');
-	chorogi.visible = false;
 
 
 	game.add.sprite(0,0, 'back');
@@ -95,6 +92,10 @@ function create() {
 	.to({ x: 430, y: 600 }, 2000, Phaser.Easing.Linear.None)
 	.loop()
 	.start();
+
+	chorogi = game.add.sprite(100,600, 'chorogi');
+	chorogi.animations.add('movechorogi');
+	chorogi.visible = false;
 	
 }
 
