@@ -78,11 +78,11 @@ function create() {
 	dust[2] = game.add.sprite(200,680, 'dust');
 	dust[2].animations.add('movedust');
 
-	dustEmitter = game.add.emitter(100, 100);
-	dustEmitter.makeParticles('dust');
-	dustEmitter.start(false, 2000, 10, 10);
-	dustEmitter.gravity=100;
 
+	dustEmitt = game.input.onDown.add(dustBurst, this);
+	dustEmitter.makeParticles('dust');
+	
+	
 
 	trowel = game.add.sprite(130,690, 'trowel');
 	trowel.animations.add('movetrowel');
@@ -93,6 +93,11 @@ function create() {
 	.loop()
 	.start();
 	
+}
+
+function dustBurst(){
+	dustEmitter.start(false, 2000, 10, 10);
+	dustEmitter.gravity=100;
 }
 
 function RbtClick() {	
