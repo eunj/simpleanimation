@@ -83,7 +83,7 @@ function create() {
 
 	dustEmitter = game.add.emitter(100, 100);
 	dustEmitter.makeParticles('dust');
-	game.input.onDown.add(dustBurst, this);
+	// game.input.onDown.add(dustBurst, this);
 	
 	
 
