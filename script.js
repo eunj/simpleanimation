@@ -8,6 +8,7 @@ var trowel;
 var chorogi;
 var hello;
 var bgm;
+var dustEmitter;
 
 
 
@@ -43,6 +44,8 @@ function create() {
 	bgm.play();
 
 
+	chorogi = game.add.sprite(100,600, 'chorogi');
+	chorogi.animations.add('movechorogi');
 
 	game.add.sprite(0,0, 'back');
 	game.add.sprite(0,0, 'drum');
@@ -75,36 +78,39 @@ function create() {
 	dust[2] = game.add.sprite(200,680, 'dust');
 	dust[2].animations.add('movedust');
 
+	dustEmitter = game.add.emitter(100, 100);
+	dustEmitter.makeParticles('cow');
+	dustEmitter.start(true, 2000, null, 10);
 
 
 	trowel = game.add.sprite(130,690, 'trowel');
 	trowel.animations.add('movetrowel');
 
 	trowel.mo = game.add.tween(trowel)
-		.to({ x: 130, y: 680 }, 2000, Phaser.Easing.Linear.None)
-		.to({ x: 430, y: 600 }, 2000, Phaser.Easing.Linear.None)
-		.loop()
+	.to({ x: 130, y: 680 }, 2000, Phaser.Easing.Linear.None)
+	.to({ x: 430, y: 600 }, 2000, Phaser.Easing.Linear.None)
+	.loop()
 	.start();
 	
 }
 
 function RbtClick() {	
 
-dust[0].animations.play('movedust', 8, false);
-dust[1].animations.play('movedust', 5, false);
-dust[2].animations.play('movedust', 10, false);
+	dust[0].animations.play('movedust', 8, false);
+	dust[1].animations.play('movedust', 5, false);
+	dust[2].animations.play('movedust', 10, false);
 
-trowel.animations.play('movetrowel', 7, false);
-hello.play();
+
+	trowel.animations.play('movetrowel', 7, false);
+	hello.play();
 
 }
 
 
 function BbtClick() {	
 	
-chorogi = game.add.sprite(100,600, 'chorogi');
-chorogi.animations.add('movechorogi');
-chorogi.animations.play('movechorogi', 10, false);
+	
+	chorogi.animations.play('movechorogi', 10, false);
 
 
 }
